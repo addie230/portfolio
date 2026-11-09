@@ -1294,3 +1294,11 @@ button:focus-visible,a:focus-visible {
     }
 }
 
+
+#education .education-card {
+    margin-top: 22px;
+}
+
+#education .education-card:first-of-type {
+    margin-top: 36px;
+}
