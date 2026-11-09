@@ -1159,3 +1159,138 @@ button:focus-visible,a:focus-visible {
         margin-top: 15px;
     }
 }
+
+
+
+/* Нова секция с разгъващи се умения */
+
+.skills-accordion {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    align-items: start;
+    margin-top: 36px;
+}
+
+.skills-group {
+    min-width: 0;
+    background: rgba(20, 25, 40, 0.85);
+    border: 1px solid rgba(170, 160, 255, 0.18);
+    border-radius: 22px;
+    overflow: hidden;
+    transition: border-color 0.25s ease;
+}
+
+.skills-group:hover,
+.skills-group[open] {
+    border-color: rgba(170, 160, 255, 0.5);
+}
+
+.skills-group summary {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    gap: 18px;
+    padding: 30px;
+    cursor: pointer;
+    list-style: none;
+}
+
+.skills-group summary::-webkit-details-marker {
+    display: none;
+}
+
+.skills-group summary::marker {
+    content: "";
+}
+
+.skills-group-icon {
+    font-size: 32px;
+    color: #a58bff;
+    font-weight: 700;
+}
+
+.skills-group-title {
+    color: #ffffff;
+    font-size: 19px;
+    font-weight: 700;
+    padding-right: 25px;
+}
+
+.skills-chevron {
+    position: absolute;
+    right: 28px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 27px;
+    color: #a58bff;
+    transition: transform 0.25s ease;
+}
+
+.skills-group[open] .skills-chevron {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.skills-group-content {
+    padding: 0 24px 24px;
+}
+
+.skills-entry {
+    padding: 17px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.skills-entry-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skills-entry-heading strong {
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.skills-level {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 30px;
+    background: rgba(165, 139, 255, 0.12);
+    color: #bcaaff;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.skills-entry p {
+    color: #aeb5c5;
+    font-size: 13px;
+    line-height: 1.7;
+    margin: 9px 0 0;
+}
+
+.skills-evidence-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #bcaaff;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.skills-evidence-link:hover {
+    color: #ffffff;
+}
+
+@media (max-width: 900px) {
+    .skills-accordion {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-group summary {
+        padding: 24px;
+    }
+}
+
