@@ -1302,3 +1302,31 @@ button:focus-visible,a:focus-visible {
 #education .education-card:first-of-type {
     margin-top: 36px;
 }
+
+
+
+/* Единен стил за цветовете на проектите */
+
+.art-violet {
+    background: linear-gradient(135deg, #8166d2 0%, #39275c 100%);
+}
+
+.art-cyan {
+    background: linear-gradient(135deg, #3197b5 0%, #15384f 100%);
+}
+
+.art-pink {
+    background: linear-gradient(135deg, #c45b92 0%, #542443 100%);
+}
+
+.art-orange {
+    background: linear-gradient(135deg, #bd8168 0%, #4a303c 100%);
+}
+
+.art-green {
+    background: linear-gradient(135deg, #379b83 0%, #164c48 100%);
+}
+
+.art-yellow {
+    background: linear-gradient(135deg, #c5a342 0%, #58401f 100%);
+}

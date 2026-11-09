@@ -15,7 +15,7 @@ const projects = [
     technologies: ['C++', 'ООП', 'STL'],
 
     icon: '✿',
-    color: 'violet',
+    color: 'yellow',
 
     problem:
       'Създаване на интерактивна система за управление на виртуална ферма, която съчетава различни игрови механики, управление на ресурси и потребителски роли.',
@@ -40,7 +40,7 @@ const projects = [
     technologies: ['C++', 'Алгоритми', 'Работа с файлове'],
 
     icon: '2048',
-    color: 'cyan',
+    color: 'pink',
 
     problem:
       'Реализиране на логиката на играта 2048 с коректно движение и обединяване на плочките, изчисляване на резултата и различни размери на игралното поле.',
@@ -66,7 +66,7 @@ const projects = [
     technologies: ['Python', 'Streamlit', 'SQL', 'UI/UX Design', 'AI'],
 
     icon: '✚',
-    color: 'violet',
+    color: 'green',
 
     problem:
       'Улесняване на достъпа до здравна информация и медицински услуги чрез обединяването им в една уеб платформа.',
@@ -128,7 +128,42 @@ const projects = [
       'Проектът е изцяло самостоятелен. Разработих обработката на входа от микрофона, логиката за преобразуване на разпознатата реч и визуализацията на изображенията.',
 
     github: ''
-  }
+  },
+   
+  
+{
+  title: 'VoxDB',
+  type: 'team',
+  categoryLabel: 'Екипен проект',
+
+  description:
+    'Уеб платформа за работа с MySQL бази данни чрез въпроси на естествен език, които автоматично се преобразуват в SQL заявки.',
+
+  technologies: [
+    'Next.js',
+    'React',
+    'TypeScript',
+    'Flask',
+    'MySQL',
+    'Firebase',
+    'Tailwind CSS'
+  ],
+
+  icon: '▦',
+  color: 'violet',
+
+  problem:
+    'Улесняване на работата с бази данни чрез предоставяне на интуитивен интерфейс за генериране на SQL заявки, преглед на таблици и анализ на информация.',
+
+  architecture:
+    'Клиент-сървър архитектура с Next.js, React и TypeScript за frontend частта, Flask API за backend функционалностите, MySQL за съхранение на данни и Firebase Authentication за удостоверяване на потребителите. Приложението позволява визуализация на таблици и автоматично генериране на SQL заявки.',
+
+  contribution:
+    'Проектът е екипен. Участвах в различни етапи от разработката, като работих както по потребителския интерфейс, така и по backend функционалности, интеграцията между компонентите и тестването на приложението.',
+
+  github: ''
+}
+
 ];
 
 
@@ -183,7 +218,7 @@ function renderProjects(category = 'all') {
     <article class="project-card">
 
       <div class="project-art art-${
-        ['violet', 'cyan', 'orange'].includes(project.color)
+        ['violet', 'cyan', 'pink', 'orange', 'green', 'yellow'].includes(project.color)
           ? project.color
           : 'violet'
       }">
