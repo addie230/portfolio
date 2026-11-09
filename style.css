@@ -1081,3 +1081,81 @@ button:focus-visible,a:focus-visible {
         font-size: 16px;
     }
 }
+
+/* Поправки за мобилната версия */
+@media (max-width: 650px) {
+
+    /* Подреждаме съдържанието вертикално */
+    #home.hero {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 28px;
+    }
+
+    .hero-copy {
+        width: 100%;
+        min-width: 0;
+    }
+
+    /* Линковете остават над картичката */
+    .hero-social {
+        position: relative;
+        z-index: 3;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+        margin-top: 25px;
+    }
+
+    /* Картичката започва под линковете */
+    .hero-visual {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin: 15px 0 0;
+        transform: none;
+    }
+
+    .code-panel {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        transform: none;
+    }
+
+    /* Кодът не излиза извън картичката */
+    .code-panel pre {
+        max-width: 100%;
+        overflow-x: auto;
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    /* Декоративните етикети не застъпват линковете */
+    .floating-tag {
+        display: none;
+    }
+
+    /* Подреждаме двата бутона */
+    .hero-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: center;
+    }
+
+    /* Надписът за скролване остава отдолу */
+    .scroll-hint {
+        position: relative;
+        margin-top: 15px;
+    }
+}
