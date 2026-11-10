@@ -332,7 +332,7 @@ grid.addEventListener('click', (event) => {
 
     <p>${escapeHTML(project.description)}</p>
 
-    <h3>Какъв проблем решава?</h3>
+    <h3>${['BarnBoss', '2048'].includes(project.title) ? 'Цел на проекта' : 'Какъв проблем решава?'}</h3>
 
     <p>${escapeHTML(project.problem)}</p>
 
